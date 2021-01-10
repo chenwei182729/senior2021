@@ -8,7 +8,5 @@ public class LockSupportT6_1 {
         System.out.println("begin park!");
         LockSupport.park();
         System.out.println("end park!");
-
-
     }
 }

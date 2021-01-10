@@ -18,7 +18,7 @@ public class LockSupportT6_4 {
         TimeUnit.SECONDS.sleep(1);
         System.out.println("main thread begin unpark!");
 
-//        LockSupport.unpark(thread);
+        LockSupport.unpark(thread);
         thread.interrupt();
     }
 }
