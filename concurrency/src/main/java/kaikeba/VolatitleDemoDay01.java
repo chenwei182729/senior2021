@@ -8,8 +8,8 @@ import java.util.concurrent.TimeUnit;
  **/
 public class VolatitleDemoDay01 {
     public static void main(String[] args) {
-//        volatitleVisibilityDemo();
-        atomicDemo();
+        volatitleVisibilityDemo();
+//        atomicDemo();
     }
 
     public static void volatitleVisibilityDemo() {

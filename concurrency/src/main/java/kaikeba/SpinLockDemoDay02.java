@@ -14,7 +14,7 @@ public class SpinLockDemoDay02 {
         Thread thread = Thread.currentThread();
         System.out.println(thread.getName() + "\t come in");
         while (!atomicReference.compareAndSet(null, thread)) {
-            System.out.println(thread.getName() + "\t compareAndSet");
+
         }
     }
 
