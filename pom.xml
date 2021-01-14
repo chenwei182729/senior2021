@@ -21,6 +21,7 @@
         <module>mlutithead-inaction</module>
         <module>mlutithead-geektime</module>
         <module>concurrency-pretty</module>
+        <module>code-test</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
