@@ -6,7 +6,7 @@ import java.io.Writer;
 
 /**
  * @author chenxinwei
- * @date 2020/12/30 11:37
+ * @date 2021/1/14 18:26
  **/
 public class Data {
     private final String filename;
@@ -19,21 +19,20 @@ public class Data {
         this.changed = false;
     }
 
-    public synchronized void change(String content) {
-        this.content = content;
+    public synchronized void change(String newContent) {
+        content = newContent;
         this.changed = true;
     }
 
     public synchronized void save() throws IOException {
-        if (!this.changed) {
-            return;
+        if (changed) {
+            doSave();
+            changed = false;
         }
-        doSave();
-        this.changed = false;
     }
 
-    public void doSave() throws IOException {
-        System.out.println(String.format("%s calls doSave,content = %s", Thread.currentThread().getName(), this.content));
+    private void doSave() throws IOException {
+        System.out.println(Thread.currentThread().getName() + " calls doSave, content = " + content);
         Writer writer = new FileWriter(filename);
         writer.write(content);
         writer.close();

@@ -27,8 +27,8 @@ public class Table {
         }
 
         count--;
-        notifyAll();
         System.out.println(String.format("%s takes %s", Thread.currentThread().getName(), cake));
+        notifyAll();
         return cake;
     }
 

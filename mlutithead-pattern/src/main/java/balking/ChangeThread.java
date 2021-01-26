@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author chenxinwei
- * @date 2020/12/30 11:37
+ * @date 2021/1/14 18:41
  **/
 public class ChangeThread extends Thread {
     private final Data data;
@@ -21,7 +21,7 @@ public class ChangeThread extends Thread {
     public void run() {
         try {
             for (int i = 0; true; i++) {
-                data.change("No. " + i);
+                data.change("No." + i);
                 TimeUnit.MILLISECONDS.sleep(random.nextInt(1000));
                 data.save();
             }
@@ -31,5 +31,4 @@ public class ChangeThread extends Thread {
             e.printStackTrace();
         }
     }
-
 }

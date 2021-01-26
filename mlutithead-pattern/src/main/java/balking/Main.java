@@ -2,12 +2,12 @@ package balking;
 
 /**
  * @author chenxinwei
- * @date 2020/12/30 11:37
+ * @date 2021/1/14 18:44
  **/
 public class Main {
     public static void main(String[] args) {
-        Data data = new Data("data.txt", "(empty)");
-        new ChangeThread("ChangerThread", data).start();
+        final Data data = new Data("data.txt", "(empty)");
+        new ChangeThread("changeThread", data).start();
         new SaveThread("saveThread", data).start();
     }
 }
