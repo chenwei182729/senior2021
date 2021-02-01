@@ -2,6 +2,7 @@ package sqlsession;
 
 import config.Function;
 import config.MapperBean;
+import mapper.UserMapper;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -19,7 +20,8 @@ public class MyMapperProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        MapperBean readMapper = myConfiguration.readMapper("UserMapper.xml");
+//        MapperBean readMapper = myConfiguration.readMapper("UserMapper.xml");
+        MapperBean readMapper = myConfiguration.readAnnotation(UserMapper.class);
         //是否是xml文件对应的接口
         if (!method.getDeclaringClass().getName().equals(readMapper.getInterfaceName())) {
             return null;
