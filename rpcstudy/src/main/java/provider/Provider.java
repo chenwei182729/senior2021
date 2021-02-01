@@ -20,8 +20,8 @@ public class Provider {
         // 1.本地注册：{服务名：实现类}
         System.out.println(HelloService.class.getName()+"========"+HelloServiceImpl.class);
         LocalRegister.register(HelloService.class.getName(), HelloServiceImpl.class);
-
         // 2.远程注册：{服务名：List(url)}
+//        URL url = new URL("localhost", 8080);
         URL url = new URL("localhost", 8080);
         RemoteRegister.register(HelloService.class.getName(), url);
 

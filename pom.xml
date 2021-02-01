@@ -23,6 +23,7 @@
         <module>concurrency-pretty</module>
         <module>code-test</module>
         <module>rpcstudy</module>
+        <module>chen-mybatis</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,6 +36,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- 读取xml文件 -->
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>1.6.1</version>
+            </dependency>
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>

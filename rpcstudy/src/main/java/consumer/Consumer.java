@@ -11,10 +11,8 @@ import provider.api.HelloService;
 public class Consumer {
 
     public static void main(String[] args) throws NoSuchMethodException {
-
         HelloService proxy = ProxyFactory.getProxy(HelloService.class);
         String result = proxy.sayHello("zzz");
         System.out.println(result);
-
     }
 }
