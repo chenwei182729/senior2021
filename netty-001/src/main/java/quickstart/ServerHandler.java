@@ -5,13 +5,11 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
-import java.nio.charset.StandardCharsets;
-
 public class ServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        System.out.println("================server channel activate=============");
+        System.err.println("================server channel activate=============");
     }
 
     @Override
@@ -22,9 +20,10 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         buf.readBytes(request);
 
         String requestBody = new String(request, "utf-8");
-        System.out.println("Server: " + requestBody);
+        System.err.println("Server: " + requestBody);
 
         String responseBody = "返回响应数据：" + requestBody;
+        //writeAndFlush 会自动帮我们释放msg的信息
         ctx.writeAndFlush(Unpooled.copiedBuffer(responseBody.getBytes()));
     }
 

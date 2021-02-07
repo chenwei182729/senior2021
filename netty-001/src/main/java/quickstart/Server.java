@@ -10,6 +10,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * 多reactor多worker模式
  */
 public class Server {
+
     public static void main(String[] args) throws Exception {
         //1. 创建两个线程组： 一个用于网络连接接收，另一个用于实际处理（网络通信的读写）
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
