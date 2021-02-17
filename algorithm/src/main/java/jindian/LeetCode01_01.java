@@ -24,7 +24,7 @@ public class LeetCode01_01 {
 
     public static void main(String[] args) {
         LeetCode01_01 leetCode01_01 = new LeetCode01_01();
-        System.out.println(leetCode01_01.isUnique("leetcode"));
+        System.out.println(leetCode01_01.isUnique("leetcode01"));
         System.out.println(leetCode01_01.isUnique("abc"));
     }
 }
