@@ -1,17 +1,27 @@
+[TOC]
+
 ##  基本流程
 
-* #### [02.移动零](https://leetcode-cn.com/problems/move-zeroes/submissions/)
-* #### [03.盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)
-* #### [22.括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
+
+
+#### ** [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/)
+
+#### [03.盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)
+
+#### ** [22.括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
 
 ### 哈希表、映射集合
 
-* #### [49.字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)
-* #### [1.两数之和](https://leetcode-cn.com/problems/two-sum/)
+#### *[49.字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)
+#### *[1.两数之和](https://leetcode-cn.com/problems/two-sum/)
 
 ### 二叉树
 
-* #### [94.二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
+#### ** [94.二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)
+
+
+
+
 
 ### 递归
 
@@ -31,14 +41,14 @@ public void recur(int level,int param) {
 
 ####  *[98.验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
 
-- #### [297.二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
+#### [297.二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/)
 
 > Homework
 
 - #### [236.二叉树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 - #### [ 105.从前序与中序遍历序列构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-- #### [77.组合](https://leetcode-cn.com/problems/combinations/)
-- #### [47.全排列 II](https://leetcode-cn.com/problems/permutations-ii/)
+#### * [77.组合](https://leetcode-cn.com/problems/combinations/)
+#### * [47.全排列 II](https://leetcode-cn.com/problems/permutations-ii/)
 
 ## 分治 && 回溯
 
@@ -191,11 +201,64 @@ class Solution {
 
 #### [22. 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
 
-#### [515. 在每个树行中找最大值](https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row/)
+#### * [515. 在每个树行中找最大值](https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row/)
 
 
 
+> HomeWork
 
+#### [127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/)
+
+#### [126. 单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/)
+
+#### [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
+
+#### [529. 扫雷游戏](https://leetcode-cn.com/problems/minesweeper/)
+
+
+
+## ## 贪心
+
+
+
+- 二分查找代码模板
+
+```java
+public int binarySearch(int[] array, int target) {
+    int left = 0, right = array.length - 1, mid;
+    while (left <= right) {
+        mid = (right - left) / 2 + left;
+        if (array[mid] == target) {
+            return mid;
+        } else if (array[mid] > target) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return -1;
+}
+```
+
+
+
+· [Fast InvSqrt() 扩展阅读](https://www.beyond3d.com/content/articles/8/)
+
+> Action
+
+#### [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/)
+
+#### [367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/)
+
+
+
+> HomeWork
+
+#### [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
+
+#### [74. 搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)
+
+#### [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)
 
 
 
