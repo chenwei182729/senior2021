@@ -7,24 +7,54 @@ public class SortAlgorithm {
         SortUtil.Print(array);
 
 
-//        insertSort(array);
+        insertSort(array);
 //        selectSort(array);
-        bubbleSort(array);
+//        bubbleSort(array);
         System.out.println("isSort: " + SortUtil.isSort(array));
         SortUtil.Print(array);
     }
+    //    public static int[] bubbleSort(int[] array) {
+//        int len = array.length;
+//        for (int i = 0; i < len - 1; i++) {
+//            for (int j = 0; j < len - 1 - i; j++) {
+//                if (array[j] > array[j + 1]) {
+//                    SortUtil.swap(array, j, j + 1);
+//                }
+//            }
+//        }
+//        return array;
+//    }
 
-    public static int[] insertSort(int[] array) {
-        int len = array.length;
-        for (int i = 0; i < len; i++) {
-            for (int j = i - 1; j >= 0; j--) {
-                if (array[j + 1] < array[j]) {
-                    SortUtil.swap(array, j + 1, j);
+    public static void bubbleSort(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length - 1 - i; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    SortUtil.swap(nums, j, j + 1);
                 }
             }
         }
-        return array;
     }
+
+    public static void insertSort(int[] nums) {
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (nums[j] > nums[j + 1]) {
+                    SortUtil.swap(nums, j, j + 1);
+                }
+            }
+        }
+    }
+//    public static int[] insertSort(int[] array) {
+//        int len = array.length;
+//        for (int i = 0; i < len; i++) {
+//            for (int j = i - 1; j >= 0; j--) {
+//                if (array[j + 1] < array[j]) {
+//                    SortUtil.swap(array, j + 1, j);
+//                }
+//            }
+//        }
+//        return array;
+//    }
 
     public static int[] selectSort(int[] array) {
         int len = array.length;
@@ -42,16 +72,5 @@ public class SortAlgorithm {
         return array;
     }
 
-    public static int[] bubbleSort(int[] array) {
-        int len = array.length;
-        for (int i = 0; i < len - 1; i++) {
-            for (int j = 0; j < len - 1 - i; j++) {
-                if (array[j] > array[j + 1]) {
-                    SortUtil.swap(array, j, j + 1);
-                }
-            }
-        }
-        return array;
-    }
 
 }

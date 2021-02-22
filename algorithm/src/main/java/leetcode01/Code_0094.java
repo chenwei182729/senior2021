@@ -8,25 +8,23 @@ public class Code_0094 {
 
     public List<Integer> inorderTraversal(TreeNode root) {
         result = new ArrayList<>();
-        _traval(root);
+        _inOrder(root);
         return result;
     }
 
-    private void _traval(TreeNode root) {
-        if (root == null) {
+    private void _inOrder(TreeNode node) {
+        if (node == null) {
             return;
         }
-
-        if (root.left != null) {
-            _traval(root.left);
+        if (node.left != null) {
+            _inOrder(node.left);
         }
-
-        result.add(root.val);
-
-        if (root.right != null) {
-            _traval(root.right);
+        result.add(node.val);
+        if (node.right != null) {
+            _inOrder(node.right);
         }
     }
+
 
     public static void main(String[] args) {
 

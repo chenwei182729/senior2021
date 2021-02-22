@@ -26,19 +26,24 @@ public class Code_0022 {
 
     public List<String> generateParenthesis(int n) {
         result = new ArrayList<>();
-        _generator(0, 0, n, "");
+        _generate(0, 0, n, "");
         return result;
     }
 
-    private void _generator(int left, int right, int n, String s) {
+    private void _generate(int left, int right, int n, String s) {
         if (left == n && right == n) {
             result.add(s);
             return;
         }
 
-        if (left < n) _generator(left + 1, right, n, s + "(");
-        if (left > right) _generator(left, right + 1, n, s + ")");
+        if (left < n) {
+            _generate(left + 1, right, n, s + "(");
+        }
+        if (right < left) {
+            _generate(left, right + 1, n, s + ")");
+        }
     }
+
 
     public static void main(String[] args) {
         Code_0022 code_0022 = new Code_0022();

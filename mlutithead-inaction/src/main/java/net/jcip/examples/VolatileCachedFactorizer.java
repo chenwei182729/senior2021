@@ -8,7 +8,7 @@ import net.jcip.annotations.*;
 /**
  * VolatileCachedFactorizer
  * <p/>
- * Caching the last result using a volatile reference to an immutable holder object
+ * Caching the last result using a volatile reference to an one.immutable holder object
  *
  * @author Brian Goetz and Tim Peierls
  */
