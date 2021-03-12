@@ -12,7 +12,7 @@ public class ProtocolFactory {
     public static Protocol getProtocol() {
         String name = System.getProperty("protocolName");
         if (name == null || name.equals("")) {
-            name = "http";
+            name = "dubbo";
         }
 
         // 协议扩展，Dubbo使用了SPI机制

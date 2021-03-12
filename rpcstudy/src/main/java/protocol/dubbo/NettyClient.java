@@ -23,7 +23,7 @@ public class NettyClient<T> {
 
     private static NettyClientHandler client;
 
-    private static ExecutorService executor = new ThreadPoolExecutor(5, 10, 0L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
+    private static ExecutorService executor = new ThreadPoolExecutor(5, 10, 1L, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
 
     public void start(String hostname, Integer port){
         client = new NettyClientHandler();
@@ -44,7 +44,7 @@ public class NettyClient<T> {
                     }
                 });
         try {
-            b.connect("localhost", 8080).sync();
+            b.connect("127.0.0.1", 8080).sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -57,12 +57,13 @@ public class NettyClient<T> {
         client.setInvocation(invocation);
 
         try {
+            //此处发消息，返回消息呢
             return (String) executor.submit(client).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-        return null;
+        return "hello";
     }
 }

@@ -16,13 +16,14 @@
         <module>concurrency</module>
         <module>java-basic-faqs</module>
         <module>mlutithead-pattern</module>
-        <module>mlutithead-inaction</module>
+<!--        <module>mlutithead-inaction</module>-->
         <module>mlutithead-geektime</module>
         <module>concurrency-pretty</module>
         <module>code-test</module>
         <module>rpcstudy</module>
         <module>chen-mybatis</module>
-        <module>netty-001</module>
+        <module>leetcode-01</module>
+        <module>basic</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,6 +37,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.openjdk.jol</groupId>
+                <artifactId>jol-core</artifactId>
+                <version>0.9</version>
+            </dependency>
             <dependency>
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-java</artifactId>
