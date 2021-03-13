@@ -24,6 +24,7 @@
         <module>chen-mybatis</module>
         <module>leetcode-01</module>
         <module>basic</module>
+        <module>pattern-23</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

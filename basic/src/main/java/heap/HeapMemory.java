@@ -1,3 +1,5 @@
+package heap;
+
 import org.openjdk.jol.info.ClassLayout;
 
 /**
@@ -12,7 +14,7 @@ import org.openjdk.jol.info.ClassLayout;
 public class HeapMemory {
     public static void main(String[] args) {
 //        Object object = new Object();
-//        CompressItem compressItem = new CompressItem(1);
+//        heap.CompressItem compressItem = new heap.CompressItem(1);
         Object[] objects = new Object[1];
         System.out.println(ClassLayout.parseInstance(objects).toPrintable());
         System.out.println("chen");
@@ -24,7 +26,7 @@ class CompressItem {
 
     @Override
     public String toString() {
-        return "CompressItem{" +
+        return "heap.CompressItem{" +
                 "age=" + age +
                 '}';
     }
